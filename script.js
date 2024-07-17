@@ -55,12 +55,12 @@ function bookDisplay(book) {
   bookTitle.textContent = `Title: ${book.title}`;
   const bookPages = document.createElement("h4");
   bookPages.textContent = `Pages: ${book.pages}`;
-  const bookRead = document.createElement("h4");
-  bookRead.textContent = book.read ? "Read: True" : "Read: False";
+  // const bookRead = document.createElement("h4");
+  // bookRead.textContent = book.read ? "Read: True" : "Read: False";
   newBook.appendChild(bookAuthor);
   newBook.appendChild(bookTitle);
   newBook.appendChild(bookPages);
-  newBook.appendChild(bookRead);
+  //newBook.appendChild(bookRead);
   library.appendChild(newBook);
 
   return newBook;
@@ -91,6 +91,11 @@ function addEditButton(bookOnLibrary, bookOnArray) {
     (P) => P.author === bookOnArray.author
   )}`;
   modifyRead.innerText = bookOnArray.read ? "Read" : "Not Read";
+  if(bookOnArray.read){
+    modifyRead.style.backgroundColor = "#96e35b";
+  }else{
+    modifyRead.style.backgroundColor = "#f76060";
+  }
   bookOnLibrary.appendChild(modifyRead);
   return modifyRead;
 }
@@ -121,8 +126,10 @@ function changeButtonState(button) {
   if (buttonText === "Read") {
     myLibrary[parseInt(buttonId)].read = false;
     button.textContent = "Not Read";
+    button.style.backgroundColor = "#f76060";
   } else {
     myLibrary[parseInt(buttonId)].read = true;
     button.textContent = "Read";
+    button.style.backgroundColor = "#96e35b";
   }
 }

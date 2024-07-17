@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wdth@0,87.5;1,87.5&family=Roboto+Serif:opsz,wdth,wght,GRAD@8..144,78.8,400,-32&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -18,47 +23,29 @@
             <form action="" method="post" id="input-book">
                 <h3>Enter book</h3>
                 <div class="form-field">
-                    <label for="author"></label>
+                    <label for="author">Author: </label>
                     <input id="author" type="text" name="author" required>
                 </div>
                 <div class="form-field">
-                    <label for="book-title"></label>
+                    <label for="book-title">Title: </label>
                     <input id="book-title" type="text" name="book-title" required>
                 </div>
                 <div class="form-field">
-                    <label for="pages"></label>
+                    <label for="pages">Pages: </label>
                     <input id="pages" type="text" name="pages" required>
                 </div>
-                <div class="form-field">
-                    <fieldset>
-                        <legend>Have you read the book?</legend>
-                        <label><input id="yes" type="radio" name="yes" value="true" /> Yes</label>
+                <div class="form-field" id="fieldset">
+                        <label><input id="yes" type="radio" name="yes" value="true" /> I have read the book</label>
                     </fieldset>
                 </div>
-                <button type="submit" class="btn">Enter book</button>
-                <button type="button" class="btn cancel">Close</button>
+                <div class="form-field form-buttons">
+                    <button type="submit" class="btn">Enter book</button>
+                    <button type="button" class="btn cancel">Close</button>
+                </div>
             </form>
         </div>
         <div id="main">
             <div id="library">
-                <!-- <div class="book">
-                    <div class="author">
-                        <h3>Author: </h3>
-                        <h4></h4>
-                    </div>
-                    <div class="book-title">
-                        <h3>Title: </h3>
-                        <h4></h4>
-                    </div>
-                    <div class="pages">
-                        <h3>Pages: </h3>
-                        <h4></h4>
-                    </div>
-                    <div class="read">
-                        <h3>Read: </h3>
-                        <h4></h4>
-                    </div>
-                </div> -->
             </div>
         </div>
         <footer>
